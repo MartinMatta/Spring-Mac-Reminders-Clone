@@ -125,7 +125,7 @@
 
 			    <c:forEach items="${listTodo}" var="todo">
 			        <li>
-                    	<svg>
+			            <svg class=${todo.flagged ? "flagged" : "noFlagged"}>
                     		<circle cx="13" cy="14" r="11"></circle>
                     	</svg>
                     	<p>${todo.title}</p>

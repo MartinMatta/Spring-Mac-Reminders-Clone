@@ -6,8 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.ModelMap;
 
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class TodoServiceImpl implements TodoService {
@@ -39,12 +38,15 @@ public class TodoServiceImpl implements TodoService {
 
     @Override
     public void sortSelect(ModelMap model, String sort) {
+        List<Todo> t = new ArrayList<>();
+
+
         switch (sort) {
             case "today":
-                model.put("listTodo", getAllTodos());
+                model.put("listTodo", t);
                 break;
             case "scheduled":
-                model.put("listTodo", getAllTodos());
+                model.put("listTodo", t);
                 break;
             case "all":
                 model.put("listTodo", getAllTodos());

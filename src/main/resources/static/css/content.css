@@ -87,3 +87,11 @@ h1.flagged {
 .todos svg:active {
 	fill: rgb(251, 191, 36);
 }
+
+.todos .flagged {
+	fill: rgb(251, 191, 36);
+}
+
+.todos .noFlagged {
+	fill: rgb(55, 65, 81);
+}
