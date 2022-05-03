@@ -17,10 +17,10 @@ public class RemindersControllerImpl implements RemindersController {
         this.todoService = todoService;
     }
 
-    @Override
-    public ModelAndView showApp(ModelMap model) {
-        model.addAttribute("todo-list", todoService.getAllTodos());
-        return new ModelAndView("app");
+    public String showApp(ModelMap model, String sort) {
+        todoService.initCount(model);
+        todoService.sortSelect(model, sort);
+        return "app";
     }
 
 }

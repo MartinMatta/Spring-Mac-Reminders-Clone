@@ -21,5 +21,6 @@ public class Todo {
     private String title;
     private String info;
     private Date date;
+    private Boolean flagged;
 
 }
