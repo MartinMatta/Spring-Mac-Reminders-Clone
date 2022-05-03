@@ -34,6 +34,10 @@ h1 {
 	display: none;
 }
 
+.block {
+    display: none;
+}
+
 h1.today {
 	color: rgb(var(--color-today));
 	display: block;
